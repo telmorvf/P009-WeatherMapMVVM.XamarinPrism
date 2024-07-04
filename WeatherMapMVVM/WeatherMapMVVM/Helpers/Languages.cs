@@ -54,5 +54,15 @@ namespace WeatherMapMVVM.Helpers
         public static string ListForecast => Resource.ListForecast;
 
         public static string Country => Resource.Country;
+
+        public static string ViewUser => Resource.ViewUser;
+
+        public static string About => Resource.About;
+
+        public static string Author => Resource.Author;
+
+        public static string Date => Resource.Date;
+
+        public static string Version => Resource.Version;
     }
 }

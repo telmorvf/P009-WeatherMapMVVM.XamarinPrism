@@ -226,5 +226,20 @@
     <BundleResource Include="Resources\ic_more_vert.png" />
     <BundleResource Include="Resources\ic_person.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_about.png" />
+    <BundleResource Include="Resources\ic_countries.png" />
+    <BundleResource Include="Resources\ic_directions_run.png" />
+    <BundleResource Include="Resources\ic_globe.png" />
+    <BundleResource Include="Resources\ic_globesmall.png" />
+    <BundleResource Include="Resources\ic_menu.png" />
+    <BundleResource Include="Resources\ic_more_horiz.png" />
+    <BundleResource Include="Resources\ic_videogame_asset.png" />
+    <BundleResource Include="Resources\ic_wb_sunny.png" />
+    <BundleResource Include="Resources\NoPhoto_round.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\splash_screen.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

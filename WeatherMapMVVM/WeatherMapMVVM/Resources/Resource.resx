@@ -160,4 +160,19 @@
   <data name="PrecipitaProb" xml:space="preserve">
     <value>Precipi. probability</value>
   </data>
+  <data name="ViewUser" xml:space="preserve">
+    <value>View User</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

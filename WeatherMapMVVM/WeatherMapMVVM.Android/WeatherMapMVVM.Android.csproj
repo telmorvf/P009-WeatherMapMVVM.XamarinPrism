@@ -131,5 +131,17 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\w_ic_d_01.svg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_about.png" />
+    <AndroidResource Include="Resources\drawable\ic_countries.png" />
+    <AndroidResource Include="Resources\drawable\ic_directions_run.png" />
+    <AndroidResource Include="Resources\drawable\ic_globe.png" />
+    <AndroidResource Include="Resources\drawable\ic_globesmall.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable\ic_more_horiz.png" />
+    <AndroidResource Include="Resources\drawable\ic_videogame_asset.png" />
+    <AndroidResource Include="Resources\drawable\ic_wb_sunny.png" />
+    <AndroidResource Include="Resources\drawable\NoPhoto_round.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

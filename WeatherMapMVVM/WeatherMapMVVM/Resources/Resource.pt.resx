@@ -116,7 +116,7 @@
     <value>Carregando</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Iniciar sessão</value>
   </data>
   <data name="City" xml:space="preserve">
     <value>Cidade</value>
@@ -159,5 +159,20 @@
   </data>
   <data name="TMin" xml:space="preserve">
     <value>Temp. mínima.</value>
+  </data>
+  <data name="ViewUser" xml:space="preserve">
+    <value>Ver utilizador</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Acerca</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versão</value>
   </data>
 </root>

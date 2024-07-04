@@ -55,7 +55,7 @@
                                 CacheDuration="50"
                                 RetryCount="3"
                                 RetryDelay="600"
-                                Source="ic_more_vert"
+                                Source="ic_app_weather"
                                 WidthRequest="100" />
                             
                             <StackLayout

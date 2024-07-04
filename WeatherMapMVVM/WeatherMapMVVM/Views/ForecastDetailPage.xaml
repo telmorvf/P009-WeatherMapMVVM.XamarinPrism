@@ -20,7 +20,7 @@
                 CacheDuration="50"
                 RetryCount="3"
                 RetryDelay="600"
-                Source="ic_more_vert"
+                Source="ic_app_weather"
                 HeightRequest="200" />
 
             <Grid
@@ -30,7 +30,7 @@
                     <ColumnDefinition
                         Width="125" />
                     <ColumnDefinition
-                        Width="*" />
+                        Width="100" />
                 </Grid.ColumnDefinitions>
                 
                 <Grid.RowDefinitions>

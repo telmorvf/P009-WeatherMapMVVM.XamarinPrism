@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="http://prismlibrary.com"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="WeatherMapMVVM.Views.ForecastMasterDetailPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage
+            Title="Menu"
+            IconImageSource="ic_action_menu_white"
+            BackgroundColor="{StaticResource ColorSecondary}">
+
+            <ContentPage.Padding>
+                <OnPlatform
+                    x:TypeArguments="Thickness">
+                    <On
+                        Platform="Android">0</On>
+                    <On
+                        Platform="iOS">0,20,0,0</On>
+                </OnPlatform>
+            </ContentPage.Padding>
+
+
+
+            <StackLayout
+                Padding="10">
+                <Image
+                    HeightRequest="150"
+                    Source="ic_app_weather"
+                    Margin="0,10,0,30" >
+                </Image> 
+                
+                <ListView
+                    BackgroundColor="Transparent"
+                    HasUnevenRows="True"
+                    ItemsSource="{Binding Menus}"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                               
+                                <Grid>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding SelectMenuCommand}" />
+                                    </Grid.GestureRecognizers>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
+                                            Width="Auto" />
+                                        <ColumnDefinition
+                                            Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image
+                                        Grid.Column="0"
+                                        Margin="5"
+                                        HeightRequest="48"
+                                        Source="{Binding Icon}"
+                                        WidthRequest="48" />
+                                    <Label
+                                        Grid.Column="1"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"
+                                        Text="{Binding Title}"
+                                        FontSize="Large"
+                                        VerticalOptions="Center" />
+                                </Grid>
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </StackLayout>
+        </ContentPage>
+    
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>
