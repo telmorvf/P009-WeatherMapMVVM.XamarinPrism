@@ -118,4 +118,40 @@
   <data name="Login" xml:space="preserve">
     <value>Acceso</value>
   </data>
+  <data name="City" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="CityForecast" xml:space="preserve">
+    <value>Pronóstico de la ciudad</value>
+  </data>
+  <data name="GlobalIdLocal" xml:space="preserve">
+    <value>GlobalIdLocal</value>
+  </data>
+  <data name="TMin" xml:space="preserve">
+    <value>Temperatura mínima</value>
+  </data>
+  <data name="TMax" xml:space="preserve">
+    <value>Temperatura máxima</value>
+  </data>
+  <data name="Weather" xml:space="preserve">
+    <value>Clima</value>
+  </data>
+  <data name="WeatherForecast" xml:space="preserve">
+    <value>Pronóstico del tiempo</value>
+  </data>
+  <data name="IsRunning" xml:space="preserve">
+    <value>Esta corriendo</value>
+  </data>
+  <data name="SearchWeatherForecast" xml:space="preserve">
+    <value>Buscar pronóstico del tiempo</value>
+  </data>
+  <data name="ListForecast" xml:space="preserve">
+    <value>Pronóstico de listas</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="SearchCity" xml:space="preserve">
+    <value>Buscar ciudad ...</value>
+  </data>
 </root>

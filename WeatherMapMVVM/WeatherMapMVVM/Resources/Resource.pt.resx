@@ -116,6 +116,42 @@
     <value>Carregando</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Conecte-se</value>
+    <value>Login</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="CityForecast" xml:space="preserve">
+    <value>Previsão por cidade</value>
+  </data>
+  <data name="GlobalIdLocal" xml:space="preserve">
+    <value>GlobalIdLocal</value>
+  </data>
+  <data name="TMin" xml:space="preserve">
+    <value>Temperatura mínima</value>
+  </data>
+  <data name="TMax" xml:space="preserve">
+    <value>Temperatura máxima</value>
+  </data>
+  <data name="Weather" xml:space="preserve">
+    <value>Clima</value>
+  </data>
+  <data name="WeatherForecast" xml:space="preserve">
+    <value>Previsão do tempo</value>
+  </data>
+  <data name="IsRunning" xml:space="preserve">
+    <value>Está a correr</value>
+  </data>
+  <data name="SearchCity" xml:space="preserve">
+    <value>Cidade a pesquisar...</value>
+  </data>
+  <data name="SearchWeatherForecast" xml:space="preserve">
+    <value>Pesquisar previsão do tempo</value>
+  </data>
+  <data name="ListForecast" xml:space="preserve">
+    <value>Previsão do tempo</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>País</value>
   </data>
 </root>

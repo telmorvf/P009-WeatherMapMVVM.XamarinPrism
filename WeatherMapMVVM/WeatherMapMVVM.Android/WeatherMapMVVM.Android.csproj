@@ -128,5 +128,8 @@
     <AndroidResource Include="Resources\drawable\ic_more_vert.png" />
     <AndroidResource Include="Resources\drawable\ic_person.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\w_ic_d_01.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

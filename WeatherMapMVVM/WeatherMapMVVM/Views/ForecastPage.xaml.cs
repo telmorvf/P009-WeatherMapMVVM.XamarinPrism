@@ -2,9 +2,9 @@
 
 namespace WeatherMapMVVM.Views
 {
-    public partial class CityForcastPage : ContentPage
+    public partial class ForecastPage : ContentPage
     {
-        public CityForcastPage()
+        public ForecastPage()
         {
             InitializeComponent();
         }

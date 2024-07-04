@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:i18n="clr-namespace:WeatherMap.Helpers"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Title="{Binding Title}"
+    BackgroundColor="{StaticResource ColorBackground}"
+    x:Class="WeatherMapMVVM.Views.ForecastPage">
+
+
+    <AbsoluteLayout>
+        <StackLayout
+            Padding="5"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All">
+
+            <SearchBar
+                Placeholder="{i18n:Translate SearchCity}"
+                SearchCommand="{Binding SearchCommand}"
+                Text="{Binding Search}" />
+
+            <CollectionView
+                ItemsSource="{Binding ObseForecast}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding SelectCountryCommand}" />
+                            </Grid.GestureRecognizers>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <ffimageloading:CachedImage
+                                Grid.Column="0"
+                                Margin="5"
+                                Aspect="AspectFill"
+                                CacheDuration="50"
+                                RetryCount="3"
+                                RetryDelay="600"
+                                Source="ic_more_vert"
+                                WidthRequest="100" />
+                            
+                            <StackLayout
+                                Grid.Column="1"
+                                VerticalOptions="Center">
+                                
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    TextColor="Black"
+                                    LineBreakMode="TailTruncation"
+                                    Text="{Binding GlobalIdLocal}" />
+
+                                <Label
+                                    FontAttributes="Italic"
+                                    VerticalOptions="End">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                Text="{i18n:Translate TMin}" />
+                                            <Span
+                                                Text="{Binding TMin, StringFormat=': {0} ºC'}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label
+                                    FontAttributes="Italic"
+                                    VerticalOptions="End">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                Text="{i18n:Translate TMax}" />
+                                            <Span
+                                                Text="{Binding TMax, StringFormat=': {0} ºC'}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            
+                            </StackLayout>
+                            <Image
+                                Grid.Column="2"
+                                Source="ic_more_vert" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+
+        <busyindicator:SfBusyIndicator
+            Title="{i18n:Translate Loading}"
+            AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+            AbsoluteLayout.LayoutFlags="All"
+            AnimationType="Gear"
+            BackgroundColor="{StaticResource ColorAccent}"
+            HorizontalOptions="Center"
+            IsBusy="{Binding IsRunning}"
+            TextColor="{StaticResource ColorFontInverse}"
+            VerticalOptions="Center"
+            ViewBoxHeight="80"
+            ViewBoxWidth="80" />
+
+    </AbsoluteLayout>
+
+</ContentPage>

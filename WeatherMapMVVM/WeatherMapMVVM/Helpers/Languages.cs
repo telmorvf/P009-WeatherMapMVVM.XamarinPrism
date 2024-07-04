@@ -3,7 +3,7 @@ using WeatherMapMVVM.Interfaces;
 using WeatherMapMVVM.Resources;
 using Xamarin.Forms;
 
-namespace WeatherMap.Helpers
+namespace WeatherMapMVVM.Helpers
 {
     public static class Languages
     {
@@ -17,18 +17,38 @@ namespace WeatherMap.Helpers
 
         public static string Accept => Resource.Accept;
 
+        public static string City => Resource.City;
+
+        public static string CityForecast => Resource.CityForecast;
+
         public static string Culture { get; set; }
 
         public static string ConnectionError => Resource.ConnectionError;
 
         public static string Error => Resource.Error;
 
-        public static string Name => Resource.Name;
+        public static string GlobalIdLocal => Resource.GlobalIdLocal;
 
         public static string Loading => Resource.Loading;
 
         public static string Login => Resource.Login;
 
+        public static string MinTemp => Resource.TMin;
 
+        public static string MaxTemp => Resource.TMax;
+
+        public static string Name => Resource.Name;
+
+        public static string Weather => Resource.Weather;
+
+        public static string WeatherForecast => Resource.WeatherForecast;
+
+        public static string IsRunning => Resource.IsRunning;
+
+        public static string SearchCity => Resource.SearchCity;
+
+        public static string ListForecast => Resource.ListForecast;
+
+        public static string Country => Resource.Country;
     }
 }

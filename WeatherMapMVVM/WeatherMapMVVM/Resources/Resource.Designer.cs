@@ -70,6 +70,24 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        internal static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City forecast.
+        /// </summary>
+        internal static string CityForecast {
+            get {
+                return ResourceManager.GetString("CityForecast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Connection error.
         /// </summary>
         internal static string ConnectionError {
@@ -79,11 +97,47 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        internal static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GlobalIdLocal.
+        /// </summary>
+        internal static string GlobalIdLocal {
+            get {
+                return ResourceManager.GetString("GlobalIdLocal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is Running.
+        /// </summary>
+        internal static string IsRunning {
+            get {
+                return ResourceManager.GetString("IsRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List Forecast.
+        /// </summary>
+        internal static string ListForecast {
+            get {
+                return ResourceManager.GetString("ListForecast", resourceCulture);
             }
         }
         
@@ -111,6 +165,60 @@ namespace WeatherMapMVVM.Resources {
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search City....
+        /// </summary>
+        internal static string SearchCity {
+            get {
+                return ResourceManager.GetString("SearchCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search Weather Forecast.
+        /// </summary>
+        internal static string SearchWeatherForecast {
+            get {
+                return ResourceManager.GetString("SearchWeatherForecast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum Temperature.
+        /// </summary>
+        internal static string TMax {
+            get {
+                return ResourceManager.GetString("TMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimum Temperature.
+        /// </summary>
+        internal static string TMin {
+            get {
+                return ResourceManager.GetString("TMin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weather.
+        /// </summary>
+        internal static string Weather {
+            get {
+                return ResourceManager.GetString("Weather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weather Forecast.
+        /// </summary>
+        internal static string WeatherForecast {
+            get {
+                return ResourceManager.GetString("WeatherForecast", resourceCulture);
             }
         }
     }

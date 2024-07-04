@@ -34,7 +34,7 @@ namespace WeatherMapMVVM.Services
                     };
                 }
 
-                var list = JsonConvert.DeserializeObject<List<T>>(result);
+                CityForecastResponse list = JsonConvert.DeserializeObject<CityForecastResponse>(result);
                 return new Response
                 {
                     IsSuccess = true,
@@ -50,5 +50,6 @@ namespace WeatherMapMVVM.Services
                 };
             }
         }
+
     }
 }

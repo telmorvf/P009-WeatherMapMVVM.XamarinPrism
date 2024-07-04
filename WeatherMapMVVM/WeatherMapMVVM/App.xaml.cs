@@ -19,13 +19,14 @@ namespace WeatherMapMVVM
 
         protected override async void OnInitialized()
         {
-            SyncfusionLicenseProvider.RegisterLicense("NzgyMzg2QDMyMzAyZTMzMmUzMGcxOS9jN3EvL2IyVkpOOWRmT0RoUituUGJKaUd1NFI5aFFvbFZPUE5vWEU9");
+            SyncfusionLicenseProvider.RegisterLicense("ODEyMjk4QDMyMzAyZTM0MmUzMGVDYU8ycFpyMlV0K1o5QmVaVDVEUGxDN2pMNDM3dEJZRlZaeVk4SVNPRWs9\r\n");
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/LoginPage");
-            
-            //await NavigationService.NavigateAsync
-                //($"/{nameof(WeatherPageMasterDetailPage)}/NavigationPage/{nameof(CityForcastPage)}");
+            await NavigationService.NavigateAsync("NavigationPage/ForecastPage");
+
+
+            //await
+            //NavigationService.NavigateAsync($"/{nameof(WeatherPageMasterDetailPage)}/NavigationPage/{nameof(CityForecastPage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -33,10 +34,10 @@ namespace WeatherMapMVVM
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
             containerRegistry.Register<IApiService, ApiService>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+
+
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
-            
-            containerRegistry.RegisterForNavigation<CityForcastPage, CityForcastPageViewModel>();
+            containerRegistry.RegisterForNavigation<ForecastPage, ForecastPageViewModel>();
         }
     }
 }

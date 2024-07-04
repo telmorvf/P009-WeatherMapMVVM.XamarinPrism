@@ -9,7 +9,7 @@
         <ResourceDictionary>
             <!--Parameters-->
             <x:String
-                x:Key="UrlAPI">https://api.ipma.pt/open-data/forecast/meteorology/cities/</x:String>
+                x:Key="UrlAPI">https://api.ipma.pt</x:String>
 
             <!--  Colors  -->
             <Color

@@ -55,8 +55,9 @@ namespace WeatherMapMVVM.ViewModels
             }
 
             await App.Current.MainPage.DisplayAlert("OK", "Boa, Entrámos", "Accept");
-
         }
+
+
     }
 }
 
