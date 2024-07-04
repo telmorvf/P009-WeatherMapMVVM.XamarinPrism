@@ -3,7 +3,6 @@ using Prism;
 using Prism.Ioc;
 using UIKit;
 
-
 namespace WeatherMapMVVM.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -22,6 +21,7 @@ namespace WeatherMapMVVM.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             LoadApplication(new App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);
