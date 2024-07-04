@@ -38,6 +38,7 @@ namespace WeatherMapMVVM
 
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<ForecastPage, ForecastPageViewModel>();
+            containerRegistry.RegisterForNavigation<ForecastDetailPage, ForecastDetailPageViewModel>();
         }
     }
 }

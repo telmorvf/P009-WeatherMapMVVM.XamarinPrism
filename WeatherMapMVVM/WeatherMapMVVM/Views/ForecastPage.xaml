@@ -36,7 +36,7 @@
 
                             <Grid.GestureRecognizers>
                                 <TapGestureRecognizer
-                                    Command="{Binding SelectCountryCommand}" />
+                                    Command="{Binding SelectCityCommand}" />
                             </Grid.GestureRecognizers>
 
                             <Grid.ColumnDefinitions>

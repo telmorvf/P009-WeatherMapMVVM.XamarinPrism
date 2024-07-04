@@ -8,8 +8,7 @@ using System.Linq;
 using WeatherMapMVVM.Helpers;
 using WeatherMapMVVM.Models;
 using WeatherMapMVVM.Services;
-using WeatherMapMVVM.ViewModels;
-using WeatherMapMVVM;
+using WeatherMapMVVM.ItemViewModels;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 
@@ -21,7 +20,7 @@ namespace WeatherMapMVVM.ViewModels
         private readonly IApiService _apiService;
         private CityForecastResponse _forecast;
         private List<CityForecast> _listForecast = new List<CityForecast>(); //Presistencia
-        private ObservableCollection<CityForecast> _obseForecast;
+        private ObservableCollection<CityItemViewModel> _obseForecast;
 
         private bool _isRunning;
         private string _search;
@@ -40,7 +39,7 @@ namespace WeatherMapMVVM.ViewModels
 
         public DelegateCommand SearchCommand => _searchCommand ?? (_searchCommand = new DelegateCommand(ShowCities));
 
-        public ObservableCollection<CityForecast> ObseForecast
+        public ObservableCollection<CityItemViewModel> ObseForecast
         {
             get => _obseForecast;
             set => SetProperty(ref _obseForecast, value);
@@ -61,7 +60,6 @@ namespace WeatherMapMVVM.ViewModels
                 ShowCities();
             }
         }
-
 
         public CityForecastResponse Forecast
         {
@@ -94,6 +92,8 @@ namespace WeatherMapMVVM.ViewModels
             string url = App.Current.Resources["UrlAPI"].ToString();
 
             Response response = await _apiService.GetListAsync<CityForecastResponse>(url, "/open-data/forecast/meteorology/cities/daily", "/hp-daily-forecast-day0");
+
+            IsRunning = false;
 
             if (!response.IsSuccess)
             {
@@ -138,12 +138,49 @@ namespace WeatherMapMVVM.ViewModels
         {
             if (string.IsNullOrEmpty(Search))
             {
-                ObseForecast = new ObservableCollection<CityForecast>(ListForecast);
+                // Converter
+                ObseForecast = new ObservableCollection<CityItemViewModel>(_listForecast.Select(p =>
+                new CityItemViewModel(_navigationService)
+                {
+                    Owner = p.Owner,
+                    Country = p.Country,
+                    ForecastDate = p.ForecastDate,
+                    DataUpdate = p.DataUpdate,
+                    PrecipitaProb = p.PrecipitaProb,
+                    TMin = p.TMin,
+                    TMax = p.TMax,
+                    PredWindDir = p.PredWindDir,
+                    IdWeatherType = p.IdWeatherType,
+                    ClassWindSpeed = p.ClassWindSpeed,
+                    Longitude = p.Longitude,
+                    ClassPrecInt = p.ClassPrecInt,
+                    GlobalIdLocal = p.GlobalIdLocal,
+                    Latitude = p.Latitude,
+                }).ToList());
             }
             else
             {
-                ObseForecast = new ObservableCollection<CityForecast>(
-                    _listForecast.Where(p => p.GlobalIdLocal.ToString().Contains(Search.ToString())));
+                // Converter
+                ObseForecast = new ObservableCollection<CityItemViewModel>(
+                    _listForecast.Select(p =>
+                    new CityItemViewModel(_navigationService)
+                    {
+                        Owner = p.Owner,
+                        Country = p.Country,
+                        ForecastDate = p.ForecastDate,
+                        DataUpdate = p.DataUpdate,
+                        PrecipitaProb = p.PrecipitaProb,
+                        TMin = p.TMin,
+                        TMax = p.TMax,
+                        PredWindDir = p.PredWindDir,
+                        IdWeatherType = p.IdWeatherType,
+                        ClassWindSpeed = p.ClassWindSpeed,
+                        Longitude = p.Longitude,
+                        ClassPrecInt = p.ClassPrecInt,
+                        GlobalIdLocal = p.GlobalIdLocal,
+                        Latitude = p.Latitude,
+                    }
+                    ).Where(p => p.GlobalIdLocal.ToString().Contains(Search.ToString())));
             }
         }
     }
