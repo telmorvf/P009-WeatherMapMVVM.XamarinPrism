@@ -128,16 +128,16 @@
     <value>GlobalIdLocal</value>
   </data>
   <data name="TMin" xml:space="preserve">
-    <value>Minimum Temperature</value>
+    <value>Minimum temp.</value>
   </data>
   <data name="TMax" xml:space="preserve">
-    <value>Maximum Temperature</value>
+    <value>Maximum temp</value>
   </data>
   <data name="Weather" xml:space="preserve">
     <value>Weather</value>
   </data>
   <data name="WeatherForecast" xml:space="preserve">
-    <value>Weather Forecast</value>
+    <value>Weather forecast</value>
   </data>
   <data name="IsRunning" xml:space="preserve">
     <value>Is Running</value>
@@ -153,5 +153,11 @@
   </data>
   <data name="Country" xml:space="preserve">
     <value>Country</value>
+  </data>
+  <data name="PredWindDir" xml:space="preserve">
+    <value>Wind direction</value>
+  </data>
+  <data name="PrecipitaProb" xml:space="preserve">
+    <value>Precipi. probability</value>
   </data>
 </root>

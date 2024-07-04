@@ -169,6 +169,24 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Precipi. probability.
+        /// </summary>
+        internal static string PrecipitaProb {
+            get {
+                return ResourceManager.GetString("PrecipitaProb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wind direction.
+        /// </summary>
+        internal static string PredWindDir {
+            get {
+                return ResourceManager.GetString("PredWindDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search City....
         /// </summary>
         internal static string SearchCity {
@@ -187,7 +205,7 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Maximum Temperature.
+        ///   Looks up a localized string similar to Maximum temp.
         /// </summary>
         internal static string TMax {
             get {
@@ -196,7 +214,7 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minimum Temperature.
+        ///   Looks up a localized string similar to Minimum temp..
         /// </summary>
         internal static string TMin {
             get {
@@ -214,7 +232,7 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weather Forecast.
+        ///   Looks up a localized string similar to Weather forecast.
         /// </summary>
         internal static string WeatherForecast {
             get {

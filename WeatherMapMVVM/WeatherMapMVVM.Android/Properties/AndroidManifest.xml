@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.appname" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
+	
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<application android:label="@string/app_name" android:icon="@drawable/ic_app_weather"></application>
+	
+	<application android:label="@string/app_name" android:icon="@drawable/ic_app_weather">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCBOxB2oadOFJfm9WJX7MxIncnR_vi_5Pk" />
+	</application>
+
 </manifest>

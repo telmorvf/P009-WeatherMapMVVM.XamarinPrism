@@ -29,6 +29,8 @@ namespace WeatherMapMVVM.Helpers
 
         public static string GlobalIdLocal => Resource.GlobalIdLocal;
 
+        public static string IsRunning => Resource.IsRunning;
+
         public static string Loading => Resource.Loading;
 
         public static string Login => Resource.Login;
@@ -43,7 +45,9 @@ namespace WeatherMapMVVM.Helpers
 
         public static string WeatherForecast => Resource.WeatherForecast;
 
-        public static string IsRunning => Resource.IsRunning;
+        public static string PredWindDir => Resource.PredWindDir;
+
+        public static string PrecipitaProb => Resource.PrecipitaProb;
 
         public static string SearchCity => Resource.SearchCity;
 

@@ -26,7 +26,7 @@ namespace WeatherMapMVVM.Models
         public int ClassWindSpeed { get; set; }
 
         [JsonProperty("longitude")]
-        public string Longitude { get; set; }
+        public double Longitude { get; set; }
 
         [JsonProperty("classPrecInt")]
         public int ClassPrecInt { get; set; }
@@ -35,6 +35,6 @@ namespace WeatherMapMVVM.Models
         public int GlobalIdLocal { get; set; }
 
         [JsonProperty("latitude")]
-        public string Latitude { get; set; }
+        public double Latitude { get; set; }
     }
 }

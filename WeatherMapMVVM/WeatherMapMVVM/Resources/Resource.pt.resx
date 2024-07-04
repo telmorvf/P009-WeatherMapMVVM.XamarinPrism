@@ -127,11 +127,8 @@
   <data name="GlobalIdLocal" xml:space="preserve">
     <value>GlobalIdLocal</value>
   </data>
-  <data name="TMin" xml:space="preserve">
-    <value>Temperatura mínima</value>
-  </data>
   <data name="TMax" xml:space="preserve">
-    <value>Temperatura máxima</value>
+    <value>Temp. máxima</value>
   </data>
   <data name="Weather" xml:space="preserve">
     <value>Clima</value>
@@ -153,5 +150,14 @@
   </data>
   <data name="Country" xml:space="preserve">
     <value>País</value>
+  </data>
+  <data name="PrecipitaProb" xml:space="preserve">
+    <value>Proba. de precipitação</value>
+  </data>
+  <data name="PredWindDir" xml:space="preserve">
+    <value>Vento direção</value>
+  </data>
+  <data name="TMin" xml:space="preserve">
+    <value>Temp. mínima.</value>
   </data>
 </root>

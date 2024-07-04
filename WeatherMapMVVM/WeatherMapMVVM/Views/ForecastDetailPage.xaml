@@ -5,6 +5,128 @@
         xmlns:prism="http://prismlibrary.com"
         prism:ViewModelLocator.AutowireViewModel="True"
         x:Class="WeatherMapMVVM.Views.ForecastDetailPage"
+        xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+        xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+        xmlns:i18n="clr-namespace:WeatherMap.Helpers"
+        BackgroundColor="{StaticResource ColorBackground}" 
         Title="{Binding Title}">
+
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            
+            <ffimageloading:CachedImage
+                Aspect="AspectFit"
+                CacheDuration="50"
+                RetryCount="3"
+                RetryDelay="600"
+                Source="ic_more_vert"
+                HeightRequest="200" />
+
+            <Grid
+                Padding="100,60">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="125" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate WeatherForecast}" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    LineBreakMode="TailTruncation"
+                    Text="{Binding City.IdWeatherType}" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate PrecipitaProb}" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    LineBreakMode="TailTruncation"
+                    Text="{Binding City.PrecipitaProb, StringFormat='{0} %'}" />
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate TMin}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="{Binding City.TMin, StringFormat='{0} ºC'}" />
+                
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate TMax}" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Text="{Binding City.TMax, StringFormat='{0} ºC'}" />
+
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate PredWindDir}" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    LineBreakMode="TailTruncation"
+                    Text="{Binding City.PredWindDir}" />
+            </Grid>
+
+            <Label
+                Text="{Binding City.Latitude}"
+                x:Name="latitude"
+                IsVisible="false" />
+            <Label
+                Text="{Binding City.Longitude}"
+                x:Name="longitude"
+                IsVisible="false" />
+            
+            <maps:Map
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                x:Name="myMap"
+                HasScrollEnabled="false"
+                MapType="Street">
+                
+            </maps:Map>
+
+        </StackLayout>
+    </ScrollView>
+
 
 </ContentPage>

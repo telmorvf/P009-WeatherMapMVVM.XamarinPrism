@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using System.Threading.Tasks;
+using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace WeatherMapMVVM.Views
 {
@@ -8,5 +11,32 @@ namespace WeatherMapMVVM.Views
         {
             InitializeComponent();
         }
+
+        private async void ContentPage_Appearing(object sender, EventArgs e)
+        {
+            string lat = "";
+            string longi = "";
+            await WaitAndExecute(1000, () => lat = latitude.Text, () => longi = longitude.Text);
+
+            LoadMap(lat, longi);
+        }
+
+        protected async Task WaitAndExecute(int milisec, Action actionToExecute, Action actionToExecute2) 
+            { await Task.Delay(milisec); actionToExecute(); actionToExecute2(); }
+
+        private void LoadMap(string lat, string longi)
+        {
+            if (string.IsNullOrEmpty(lat) || string.IsNullOrEmpty(longi))
+            {
+                var latlng = new Position(0, 0);
+                myMap.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(500)));
+            }
+            else
+            {
+                var latlng = new Position(Convert.ToDouble(lat), Convert.ToDouble(longi));
+                myMap.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(500)));
+            }
+        }
+
     }
 }
