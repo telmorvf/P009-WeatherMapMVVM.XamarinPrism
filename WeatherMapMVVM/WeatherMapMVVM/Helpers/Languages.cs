@@ -64,5 +64,11 @@ namespace WeatherMapMVVM.Helpers
         public static string Date => Resource.Date;
 
         public static string Version => Resource.Version;
+
+        public static string DoYouWantExit => Resource.DoYouWantExit;
+
+        public static string Exit => Resource.Exit;
+
+        public static string GoBack => Resource.GoBack;
     }
 }

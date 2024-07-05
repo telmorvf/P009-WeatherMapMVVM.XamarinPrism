@@ -22,7 +22,7 @@ namespace WeatherMapMVVM
             SyncfusionLicenseProvider.RegisterLicense("ODEyMjk4QDMyMzAyZTM0MmUzMGVDYU8ycFpyMlV0K1o5QmVaVDVEUGxDN2pMNDM3dEJZRlZaeVk4SVNPRWs9\r\n");
             InitializeComponent();
 
-            //await NavigationService.NavigateAsync("NavigationPage/ForecastPage");
+            //await NavigationService.NavigateAsync("NavigationPage/LoginPage");
 
             await NavigationService.NavigateAsync($"/{nameof(ForecastMasterDetailPage)}/NavigationPage/{nameof(ForecastPage)}");
         }
@@ -38,6 +38,8 @@ namespace WeatherMapMVVM
             containerRegistry.RegisterForNavigation<ForecastDetailPage, ForecastDetailPageViewModel>();
             containerRegistry.RegisterForNavigation<AboutPage, AboutPageViewModel>();
             containerRegistry.RegisterForNavigation<ForecastMasterDetailPage, ForecastMasterDetailPageViewModel>();
+
+            containerRegistry.RegisterForNavigation<ExitPage, ExitPageViewModel>();
         }
     }
 }

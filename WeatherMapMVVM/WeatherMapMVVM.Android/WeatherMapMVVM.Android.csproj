@@ -75,6 +75,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\CloseApplication.cs" />
     <Compile Include="Implementations\Localize.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="MainActivity.cs" />
@@ -142,6 +143,16 @@
     <AndroidResource Include="Resources\drawable\ic_videogame_asset.png" />
     <AndroidResource Include="Resources\drawable\ic_wb_sunny.png" />
     <AndroidResource Include="Resources\drawable\NoPhoto_round.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\emergency_exit.png" />
+    <AndroidResource Include="Resources\drawable\forecast.png" />
+    <AndroidResource Include="Resources\drawable\ic_at1.png" />
+    <AndroidResource Include="Resources\drawable\ic_exit1.png" />
+    <AndroidResource Include="Resources\drawable\ic_forecast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_avatar5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

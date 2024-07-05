@@ -6,7 +6,7 @@ using WeatherMapMVVM.Interfaces;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace WeatherMap.Helpers
+namespace WeatherMapMVVM.Helpers
 {
     [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension

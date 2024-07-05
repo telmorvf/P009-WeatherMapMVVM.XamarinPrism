@@ -175,4 +175,13 @@
   <data name="Version" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="DoYouWantExit" xml:space="preserve">
+    <value>Do You Want Exit?</value>
+  </data>
+  <data name="GoBack" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
 </root>

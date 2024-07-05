@@ -133,6 +133,15 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do You Want Exit?.
+        /// </summary>
+        internal static string DoYouWantExit {
+            get {
+                return ResourceManager.GetString("DoYouWantExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string Error {
@@ -142,11 +151,29 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GlobalIdLocal.
         /// </summary>
         internal static string GlobalIdLocal {
             get {
                 return ResourceManager.GetString("GlobalIdLocal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go Back.
+        /// </summary>
+        internal static string GoBack {
+            get {
+                return ResourceManager.GetString("GoBack", resourceCulture);
             }
         }
         

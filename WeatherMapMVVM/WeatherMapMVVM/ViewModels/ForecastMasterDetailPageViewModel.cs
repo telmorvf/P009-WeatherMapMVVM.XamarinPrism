@@ -29,21 +29,21 @@ namespace WeatherMapMVVM.ViewModels
             {
                 new Menu
                 {
-                    Icon = "ic_wb_sunny",
+                    Icon = "ic_forecast",
                     PageName = $"{nameof(ForecastPage)}",
                     Title = Languages.WeatherForecast
                 },
                 new Menu
                 {
-                    Icon = "ic_countries",
+                    Icon = "ic_forecast",
                     PageName = $"{nameof(AboutPage)}",
-                    Title = "qqqqqqq"
+                    Title = "Person ."
                 },
                 new Menu
                 {
-                    Icon = "ic_videogame_asset",
+                    Icon = "ic_weather",
                     PageName = $"{nameof(AboutPage)}",
-                    Title = "rrrrrrr"
+                    Title = "GiftCard ."
                 },
                 new Menu
                 {
@@ -53,9 +53,9 @@ namespace WeatherMapMVVM.ViewModels
                 },
                 new Menu
                 {
-                    Icon = "ic_directions_run",
-                    PageName = $"{nameof(AboutPage)}",
-                    Title = "rrrrrrr EXIT"
+                    Icon = "ic_exit1",
+                    PageName = $"{nameof(ExitPage)}",
+                    Title = Title = Languages.Exit
                 }
             };
 

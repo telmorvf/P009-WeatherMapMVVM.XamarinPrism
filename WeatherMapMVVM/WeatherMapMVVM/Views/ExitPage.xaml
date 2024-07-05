@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="WeatherMapMVVM.Views.ExitPage"
+    xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
+    BackgroundColor="{StaticResource ColorBackground}"
+    Title="{Binding Title}">
+
+
+    <StackLayout
+        Padding="10">
+        <Image
+            HeightRequest="150"
+            Source="ic_exit"
+            Margin="0,10,0,30" />
+
+            <Label
+                TextColor="Black"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="{i18n:Translate DoYouWantExit}"
+                Padding="30" />
+
+            <Button    
+                x:Name="btnGoback"
+                Text="{i18n:Translate GoBack}"
+                BackgroundColor="#387138"
+                Padding="10" />
+            <Button
+                x:Name="btnExit"
+                Text="{i18n:Translate Exit}"
+                BackgroundColor="#E61007"
+                Padding="10" />
+
+    </StackLayout>
+
+</ContentPage>

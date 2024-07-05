@@ -5,7 +5,7 @@
             xmlns:prism="http://prismlibrary.com"
             prism:ViewModelLocator.AutowireViewModel="True"
             x:Class="WeatherMapMVVM.Views.AboutPage"
-            xmlns:i18n="clr-namespace:WeatherMap.Helpers"
+            xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
             BackgroundColor="{StaticResource ColorBackground}"
             Title="{Binding Title}">
 
@@ -14,7 +14,7 @@
         Padding="10">
         <Image
             HeightRequest="150"
-            Source="ic_app_weather"
+            Source="ic_avatar5"
             Margin="0,10,0,30" />
 
         <Grid
@@ -73,6 +73,33 @@
                 Grid.Column="1"
                 FontSize="Large"
                 Text="10/07/2024" />
+
+            <Label
+                Grid.Row="3"
+                TextColor="Black"
+                Grid.Column="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="ufcd5423" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="1"
+                FontSize="Large"
+                Text="Acesso móvel a sistemas de informação" />
+            <Label
+                Grid.Row="4"
+                TextColor="Black"
+                Grid.Column="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Professor" />
+            <Label
+                Grid.Row="4"
+                Grid.Column="1"
+                FontSize="Large"
+                Text="Rafael Santos" />
+
+
         </Grid>
     </StackLayout>
 

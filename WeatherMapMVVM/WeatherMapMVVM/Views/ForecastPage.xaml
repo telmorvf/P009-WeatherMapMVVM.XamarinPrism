@@ -5,7 +5,7 @@
     xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     xmlns:prism="http://prismlibrary.com"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:i18n="clr-namespace:WeatherMap.Helpers"
+    xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
     prism:ViewModelLocator.AutowireViewModel="True"
     Title="{Binding Title}"
     BackgroundColor="{StaticResource ColorBackground}"
@@ -109,14 +109,14 @@
             Title="{i18n:Translate Loading}"
             AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
             AbsoluteLayout.LayoutFlags="All"
-            AnimationType="Gear"
-            BackgroundColor="{StaticResource ColorAccent}"
+            AnimationType="Cupertino"
+            BackgroundColor="{StaticResource ColorBackground}"
             HorizontalOptions="Center"
             IsBusy="{Binding IsRunning}"
-            TextColor="{StaticResource ColorFontInverse}"
+            TextColor="{StaticResource ColorFont}"
             VerticalOptions="Center"
-            ViewBoxHeight="80"
-            ViewBoxWidth="80" />
+            ViewBoxHeight="120"
+            ViewBoxWidth="120" />
 
     </AbsoluteLayout>
 

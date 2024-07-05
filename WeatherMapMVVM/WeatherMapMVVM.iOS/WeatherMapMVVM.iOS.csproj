@@ -103,6 +103,7 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Implementations\CloseApplication.cs" />
     <Compile Include="Implementations\Localize.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

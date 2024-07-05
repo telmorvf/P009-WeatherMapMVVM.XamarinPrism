@@ -7,7 +7,7 @@
         x:Class="WeatherMapMVVM.Views.ForecastDetailPage"
         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
         xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-        xmlns:i18n="clr-namespace:WeatherMap.Helpers"
+        xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
         BackgroundColor="{StaticResource ColorBackground}" 
         Title="{Binding Title}">
 
