@@ -6,11 +6,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using WeatherMapMVVM.Helpers;
-using WeatherMapMVVM.Models;
-using WeatherMapMVVM.Services;
 using WeatherMapMVVM.ItemViewModels;
-using Xamarin.Forms;
+using WeatherMapMVVM.Models;
+using WeatherMapMVVM.Models.ipma;
+using WeatherMapMVVM.Services;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace WeatherMapMVVM.ViewModels
 {
@@ -21,6 +22,8 @@ namespace WeatherMapMVVM.ViewModels
         private CityForecastResponse _forecast;
         private List<CityForecast> _listForecast = new List<CityForecast>(); //Presistencia
         private ObservableCollection<CityItemViewModel> _obseForecast;
+        private List<IdLocal> _idLocals = ListIdLocal.LoadIDLocal();
+        private List<IdWeatherType> _idWeatherTypes = ListWeatherType.LoadIDWeatherType();
 
         private bool _isRunning;
         private string _search;
@@ -39,12 +42,25 @@ namespace WeatherMapMVVM.ViewModels
 
         public DelegateCommand SearchCommand => _searchCommand ?? (_searchCommand = new DelegateCommand(ShowCities));
 
+
+
+        public CityForecastResponse Forecast
+        {
+            get => _forecast;
+            set => SetProperty(ref _forecast, value);
+        }
+
+        public List<CityForecast> ListForecast
+        {
+            get => _listForecast;
+            set => SetProperty(ref _listForecast, value);
+        }
+
         public ObservableCollection<CityItemViewModel> ObseForecast
         {
             get => _obseForecast;
             set => SetProperty(ref _obseForecast, value);
         }
-
         public bool IsRunning
         {
             get => _isRunning;
@@ -59,18 +75,6 @@ namespace WeatherMapMVVM.ViewModels
                 SetProperty(ref _search, value);
                 ShowCities();
             }
-        }
-
-        public CityForecastResponse Forecast
-        {
-            get => _forecast;
-            set => SetProperty(ref _forecast, value);
-        }
-
-        public List<CityForecast> ListForecast
-        {
-            get => _listForecast;
-            set => SetProperty(ref _listForecast, value);
         }
 
         private async void LoadForecastAsync()
@@ -108,7 +112,29 @@ namespace WeatherMapMVVM.ViewModels
 
             foreach (var city in _forecast.Data)
             {
-                // Converter
+                var tempLocal = "";
+                foreach (var idLocal in _idLocals)
+                {
+                    if (city.GlobalIdLocal == idLocal.GlobalIdLocal)
+                    {
+                        tempLocal = idLocal.Local;
+                    }
+                }
+
+                var tempWeatherType = "";
+                var tempWeatherTypeImg = "";
+                foreach (var _idWeatherType in _idWeatherTypes)
+                {
+                    if (city.IdWeatherType == _idWeatherType.IdWType)
+                    {
+                        tempWeatherType = _idWeatherType.DescWeatherTypePT;
+                        tempWeatherTypeImg = _idWeatherType.WTypeImage;
+                    }
+                }
+
+                var tempWind = WindDirection(city.PredWindDir);
+
+                // Converter              
                 _listForecast.Add(new CityForecast
                 {
                     Owner = _forecast.Owner,
@@ -120,41 +146,93 @@ namespace WeatherMapMVVM.ViewModels
                     TMin = city.TMin,
                     TMax = city.TMax,
                     PredWindDir = city.PredWindDir,
+                    PredWindDirDesc = tempWind,
+
                     IdWeatherType = city.IdWeatherType,
+                    WType = tempWeatherType,
+                    WTypeImage = tempWeatherTypeImg,
+
                     ClassWindSpeed = city.ClassWindSpeed,
                     Longitude = city.Longitude,
                     ClassPrecInt = city.ClassPrecInt,
                     GlobalIdLocal = city.GlobalIdLocal,
+                    Local = tempLocal,
                     Latitude = city.Latitude,
-                });
-
-                ShowCities();
+                }); ;
             }
 
+            //ObseForecast = new ObservableCollection<CityForecast>(ListForecast);
+            ShowCities();
+        }
 
+        private string WindDirection(string predWindDir)
+        {
+            string tempWin = "";
+
+            switch (predWindDir)
+            {
+                case "N":
+                    tempWin = "Norte";
+                    break;
+                case "NE":
+                    tempWin = "Nordeste";
+                    break;
+                case "E":
+                    tempWin = "Este";
+                    break;
+                case "SE":
+                    tempWin = "Sudeste";
+                    break;
+                case "S":
+                    tempWin = "Sul";
+                    break;
+                case "Sw":
+                    tempWin = "Sudoeste";
+                    break;
+                case "W":
+                    tempWin = "Oeste";
+                    break;
+                case "NW":
+                    tempWin = "Noroeste";
+                    break;
+                default:
+                    break;
+            }
+            return tempWin;
         }
 
         private void ShowCities()
         {
             if (string.IsNullOrEmpty(Search))
             {
+
                 // Converter
-                ObseForecast = new ObservableCollection<CityItemViewModel>(_listForecast.Select(p =>
+                ObseForecast = new ObservableCollection<CityItemViewModel>(
+                    _listForecast
+                    .Select(p =>
                 new CityItemViewModel(_navigationService)
                 {
                     Owner = p.Owner,
                     Country = p.Country,
                     ForecastDate = p.ForecastDate,
                     DataUpdate = p.DataUpdate,
+
                     PrecipitaProb = p.PrecipitaProb,
                     TMin = p.TMin,
                     TMax = p.TMax,
+
                     PredWindDir = p.PredWindDir,
+                    PredWindDirDesc = p.PredWindDirDesc,
+
                     IdWeatherType = p.IdWeatherType,
+                    WType = p.WType,
+                    WTypeImage = p.WTypeImage,
+
                     ClassWindSpeed = p.ClassWindSpeed,
                     Longitude = p.Longitude,
                     ClassPrecInt = p.ClassPrecInt,
                     GlobalIdLocal = p.GlobalIdLocal,
+                    Local = p.Local,
                     Latitude = p.Latitude,
                 }).ToList());
             }
@@ -169,19 +247,28 @@ namespace WeatherMapMVVM.ViewModels
                         Country = p.Country,
                         ForecastDate = p.ForecastDate,
                         DataUpdate = p.DataUpdate,
+
                         PrecipitaProb = p.PrecipitaProb,
                         TMin = p.TMin,
                         TMax = p.TMax,
+
                         PredWindDir = p.PredWindDir,
+                        PredWindDirDesc = p.PredWindDirDesc,
+
                         IdWeatherType = p.IdWeatherType,
+                        WType = p.WType,
+                        WTypeImage = p.WTypeImage,
+
                         ClassWindSpeed = p.ClassWindSpeed,
                         Longitude = p.Longitude,
                         ClassPrecInt = p.ClassPrecInt,
                         GlobalIdLocal = p.GlobalIdLocal,
+                        Local = p.Local,
                         Latitude = p.Latitude,
                     }
-                    ).Where(p => p.GlobalIdLocal.ToString().Contains(Search.ToString())));
+                    ).Where(p => p.Local.ToLower().Contains(Search.ToLower())));
             }
         }
+
     }
 }

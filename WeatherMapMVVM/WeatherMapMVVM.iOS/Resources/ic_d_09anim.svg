@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="500" width="500" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path id="path4-4" style="stroke:#969696;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:15;fill:#eeeeee;" d="m421.36,214.37c-4.673-7.3171-10.457-13.808-17.361-19.5-24.12-19.04-49.93-21.53-70.97-19.97-11.53-45.22-40.79-71.03-84.37-71.48-12.59,0-24.57,2.5382-35.941,7.6146s-21.219,11.574-29.545,19.493c-8.3254,7.9192-14.924,17.869-19.798,29.849-5.4868,15.355-6.8295,23.692-7.0055,39.545-15.682-3.9634-37.045-4.9672-50.256,0.30459-15.839,6.9039-27.006,18.681-33.504,35.332-4.0611,11.168-5.2795,22.133-3.655,32.896,1.6244,10.762,5.9902,20.61,13.097,29.545,7.107,8.9345,16.042,15.432,26.803,19.493,7.5132,2.8428,14.924,4.2642,22.235,4.2642h218.69c17.463,0,33.504,2.7385,48.125-7.2113,35.583-25.102,42.547-69.324,23.453-100.18z" horiz-adv-x="1205.1" unicode="" glyph-name="cloud-6"/>
+ <path id="path4" style="stroke-dasharray:none;stroke:#969696;stroke-width:11.99155712;stroke-miterlimit:4;fill:#3dade2;" d="m207.6,259.21-48.322,34.125c-10.211,7.1853-16.444,19.537-15.313,32.839,1.6508,20.05,19.322,34.914,39.372,33.263,20.05-1.6509,34.914-19.322,33.263-39.372l-5.017-58.997c-0.14954-1.9622-2.287-2.959-3.9835-1.8575z" horiz-adv-x="1000" unicode="" glyph-name="weather">
+  <animateTransform id="anim1" from="0 -30" repeatCount="indefinite" attributeName="transform" to="-40 80" attributeType="xml" dur="1s" type="translate"/>
+  <animate id="anim2" from="0" repeatCount="indefinite" attributeName="opacity" to="1" dur="1s"/>
+ </path>
+ <path id="path9411" style="stroke-dasharray:none;stroke:#969696;stroke-width:11.99155712;stroke-miterlimit:4;fill:#3dade2;" d="m326.63,311.47-48.322,34.125c-10.211,7.1853-16.444,19.537-15.313,32.839,1.6508,20.05,19.322,34.914,39.372,33.263,20.05-1.6509,34.914-19.322,33.263-39.372l-5.017-58.997c-0.14954-1.9622-2.287-2.959-3.9835-1.8575z" horiz-adv-x="1000" unicode="" glyph-name="weather">
+  <animateTransform id="anim3" from="0 -60" repeatCount="indefinite" attributeName="transform" to="-30 35" attributeType="xml" dur="1.5s" type="translate"/>
+  <animate id="anim4" from="0" repeatCount="indefinite" attributeName="opacity" to="1" dur="1.5s"/>
+ </path>
+</svg>

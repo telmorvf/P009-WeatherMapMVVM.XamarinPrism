@@ -5,14 +5,15 @@
     xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     xmlns:prism="http://prismlibrary.com"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffimageloadingSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
     prism:ViewModelLocator.AutowireViewModel="True"
-    Title="{Binding Title}"
+    Title="{Binding Title, Title}"
     BackgroundColor="{StaticResource ColorBackground}"
     x:Class="WeatherMapMVVM.Views.ForecastPage">
-
-
+    
     <AbsoluteLayout>
+
         <StackLayout
             Padding="5"
             AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -23,7 +24,7 @@
                 SearchCommand="{Binding SearchCommand}"
                 Text="{Binding Search}" />
 
-            <CollectionView
+            <CollectionView           
                 ItemsSource="{Binding ObseForecast}">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout
@@ -47,54 +48,51 @@
                                 <ColumnDefinition
                                     Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            
-                            <ffimageloading:CachedImage
+
+                            <ffimageloadingSvg:SvgCachedImage
                                 Grid.Column="0"
                                 Margin="5"
                                 Aspect="AspectFill"
                                 CacheDuration="50"
                                 RetryCount="3"
                                 RetryDelay="600"
-                                Source="ic_app_weather"
+                                Source="{Binding WTypeImage}"
                                 WidthRequest="100" />
-                            
                             <StackLayout
                                 Grid.Column="1"
                                 VerticalOptions="Center">
-                                
                                 <Label
                                     FontAttributes="Bold"
                                     FontSize="Medium"
                                     TextColor="Black"
                                     LineBreakMode="TailTruncation"
-                                    Text="{Binding GlobalIdLocal}" />
+                                    Text="{Binding Local}" />
 
                                 <Label
-                                    FontAttributes="Italic"
+                                    FontAttributes="Bold, Italic" 
                                     VerticalOptions="End">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span
-                                                Text="{i18n:Translate TMin}" />
-                                            <Span
-                                                Text="{Binding TMin, StringFormat=': {0} ºC'}" />
+                                                Text="{Binding WType}" />
+
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
 
                                 <Label
-                                    FontAttributes="Italic"
+                                    
+                                    FontAttributes="Bold, Italic"
                                     VerticalOptions="End">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span
-                                                Text="{i18n:Translate TMax}" />
+                                                Text="{Binding TMax, StringFormat='Max.: {0} ºC   '}" />
                                             <Span
-                                                Text="{Binding TMax, StringFormat=': {0} ºC'}" />
+                                                Text="{Binding TMin, StringFormat='    Min.: {0} ºC'}" />
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
-                            
                             </StackLayout>
                             <Image
                                 Grid.Column="2"
@@ -104,6 +102,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </StackLayout>
+
 
         <busyindicator:SfBusyIndicator
             Title="{i18n:Translate Loading}"

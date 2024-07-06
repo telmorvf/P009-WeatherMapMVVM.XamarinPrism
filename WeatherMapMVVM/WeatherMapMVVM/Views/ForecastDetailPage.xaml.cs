@@ -14,6 +14,9 @@ namespace WeatherMapMVVM.Views
 
         private async void ContentPage_Appearing(object sender, EventArgs e)
         {
+            var latlng = new Position(38.85, -8.9);
+            myMap.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(150)));
+
             string lat = "";
             string longi = "";
             await WaitAndExecute(1000, () => lat = latitude.Text, () => longi = longitude.Text);
@@ -28,13 +31,13 @@ namespace WeatherMapMVVM.Views
         {
             if (string.IsNullOrEmpty(lat) || string.IsNullOrEmpty(longi))
             {
-                var latlng = new Position(0, 0);
-                myMap.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(500)));
+                var latlng = new Position(38.85, -8.9);
+                myMap.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(60)));
             }
             else
             {
                 var latlng = new Position(Convert.ToDouble(lat), Convert.ToDouble(longi));
-                myMap.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(500)));
+                myMap.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(60)));
             }
         }
 

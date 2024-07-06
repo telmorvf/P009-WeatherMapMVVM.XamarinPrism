@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="WeatherMapMVVM.Views.MapsPage"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffimageloadingSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
+    BackgroundColor="{StaticResource ColorBackground}"
+    Title="{Binding Title}"
+    Appearing="ContentPage_Appearing"
+    >
+
+    <ScrollView>
+        <StackLayout
+            Padding="10">
+            <ffimageloadingSvg:SvgCachedImage
+                Aspect="AspectFit"
+                Source="ic_google_mapsL"
+                HeightRequest="100" />
+
+            <Grid
+                Padding="55,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="86" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition
+                        Height="30" />
+
+                </Grid.RowDefinitions>
+
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="Google Maps " />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    LineBreakMode="TailTruncation"
+                    Text="" />
+
+
+            </Grid>
+
+            <maps:Map
+                IsShowingUser="True"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                x:Name="myGoogleMaps"
+                HasScrollEnabled="false"
+                MapType="Street">
+            </maps:Map>
+
+
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

@@ -184,4 +184,10 @@
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="Chronometer" xml:space="preserve">
+    <value>Chronometer</value>
+  </data>
+  <data name="CardinalPoints" xml:space="preserve">
+    <value>Cardinal Points</value>
+  </data>
 </root>

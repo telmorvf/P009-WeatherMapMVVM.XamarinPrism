@@ -88,6 +88,24 @@ namespace WeatherMapMVVM.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cardinal Points.
+        /// </summary>
+        internal static string CardinalPoints {
+            get {
+                return ResourceManager.GetString("CardinalPoints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chronometer.
+        /// </summary>
+        internal static string Chronometer {
+            get {
+                return ResourceManager.GetString("Chronometer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         internal static string City {

@@ -5,7 +5,6 @@ using System.Linq;
 using WeatherMapMVVM.Helpers;
 using WeatherMapMVVM.ItemViewModels;
 using WeatherMapMVVM.Models;
-using WeatherMapMVVM.ViewModels;
 using WeatherMapMVVM.Views;
 
 namespace WeatherMapMVVM.ViewModels
@@ -35,19 +34,19 @@ namespace WeatherMapMVVM.ViewModels
                 },
                 new Menu
                 {
-                    Icon = "ic_forecast",
-                    PageName = $"{nameof(AboutPage)}",
-                    Title = "Person ."
+                    Icon = "ic_cardinal_points",
+                    PageName = $"{nameof(CardinalPointsPage)}",
+                    Title = Languages.CardinalPoints
                 },
                 new Menu
                 {
-                    Icon = "ic_weather",
-                    PageName = $"{nameof(AboutPage)}",
-                    Title = "GiftCard ."
+                    Icon = "ic_google_maps",
+                    PageName = $"{nameof(MapsPage)}",
+                    Title = "Google Maps"
                 },
                 new Menu
                 {
-                    Icon = "ic_about",
+                    Icon = "ic_at1",
                     PageName = $"{nameof(AboutPage)}",
                     Title = Languages.About
                 },

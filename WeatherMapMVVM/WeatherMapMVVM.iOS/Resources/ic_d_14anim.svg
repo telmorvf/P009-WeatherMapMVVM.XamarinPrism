@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="500" width="500" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path id="path4-4" style="stroke-dasharray:none;stroke:#969696;stroke-width:18;stroke-miterlimit:4;fill:#aaaaaa;" d="M439.09,133.25c-5.09-7.97-11.39-15.04-18.91-21.24-26.28-20.736-54.39-23.454-77.3-21.755-12.56-49.252-44.43-77.362-91.9-77.851-13.713,0-26.762,2.7647-39.148,8.2941s-23.113,12.607-32.181,21.233c-9.0683,8.6259-16.256,19.464-21.565,32.513-5.9764,16.725-7.4389,25.806-7.6306,43.074-17.081-4.3171-40.351-5.4105-54.741,0.33177-17.252,7.52-29.416,20.348-36.494,38.485-4.4235,12.165-5.7506,24.108-3.9812,35.831,1.7694,11.722,6.5247,22.449,14.266,32.181,7.7412,9.7318,17.473,16.809,29.195,21.233,8.1836,3.0965,16.256,4.6447,24.219,4.6447h238.21c19.021,0,36.494,2.9829,52.419-7.8548,38.758-27.342,46.344-75.51,25.546-109.12z" horiz-adv-x="1205.1" unicode="" glyph-name="cloud-6"/>
+ <path id="path4" style="stroke-dasharray:none;stroke:#969696;stroke-width:9.32061958;stroke-miterlimit:4;fill:#3dade2;" d="m202.39,186.9-22.831,39.912c-4.8327,8.4157-5.1657,19.165-0.00017,28.163,7.749,13.582,25.08,18.248,38.662,10.499s18.248-25.08,10.499-38.662l-22.914-39.912c-0.74991-1.3332-2.583-1.3332-3.4163,0.00002z" horiz-adv-x="1000" unicode="" glyph-name="weather">
+  <animateTransform id="anim1" from="0 -30" repeatCount="indefinite" attributeName="transform" to="0 120" attributeType="xml" dur="1s" type="translate"/>
+  <animate id="anim2" from="0" repeatCount="indefinite" attributeName="opacity" to="1" dur="1s"/>
+ </path>
+ <path id="path9411" style="stroke-miterlimit:4;stroke:#969696;stroke-width:9.32061958;stroke-dasharray:none;fill:#3dade2;" d="m351.42,300.3-22.831,39.912c-4.8327,8.4157-5.1657,19.165-0.00017,28.163,7.749,13.582,25.08,18.248,38.662,10.499s18.248-25.08,10.499-38.662l-22.914-39.912c-0.74991-1.3332-2.583-1.3332-3.4163,0.00002z" horiz-adv-x="1000" unicode="" glyph-name="weather">
+  <animateTransform id="anim3" from="0 -130" repeatCount="indefinite" attributeName="transform" to="0 30" attributeType="xml" dur="1s" type="translate"/>
+  <animate id="anim4" from="0" repeatCount="indefinite" attributeName="opacity" to="1" dur="1s"/>
+ </path>
+ <path id="path3774" style="stroke-miterlimit:4;stroke:#969696;stroke-width:9.32061863;stroke-dasharray:none;fill:#3dade2;" d="m133.35,291.61-22.831,39.912c-4.8328,8.4158-5.1657,19.165-0.00018,28.163,7.749,13.582,25.08,18.248,38.662,10.499s18.248-25.08,10.499-38.662l-22.914-39.912c-0.74991-1.3332-2.583-1.3332-3.4163,0.00002z" horiz-adv-x="1000" unicode="" glyph-name="weather">
+  <animateTransform id="anim5" from="0 -130" repeatCount="indefinite" attributeName="transform" to="0 30" attributeType="xml" dur="1.5s" type="translate"/>
+  <animate id="anim6" from="0" repeatCount="indefinite" attributeName="opacity" to="1" dur="1.5s"/>
+ </path>
+ <path id="path3776" style="stroke-dasharray:none;stroke:#969696;stroke-width:9.32061958;stroke-miterlimit:4;fill:#3dade2;" d="m282.39,378.18-22.831,39.912c-4.8327,8.4157-5.1657,19.165-0.00017,28.163,7.749,13.582,25.08,18.248,38.662,10.499s18.248-25.08,10.499-38.662l-22.914-39.912c-0.74991-1.3332-2.583-1.3332-3.4163,0.00002z" horiz-adv-x="1000" unicode="" glyph-name="weather">
+  <animateTransform id="anim7" from="0 -150" repeatCount="indefinite" attributeName="transform" to="0 -20" attributeType="xml" dur="1.5s" type="translate"/>
+  <animate id="anim8" from="0" repeatCount="indefinite" attributeName="opacity" to="1" dur="1.5s"/>
+ </path>
+</svg>

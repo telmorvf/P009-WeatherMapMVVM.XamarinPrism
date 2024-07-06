@@ -35,7 +35,7 @@ namespace WeatherMapMVVM.ViewModels
             if (parameters.ContainsKey("city"))
             {
                 City = parameters.GetValue<CityForecast>("city");
-                Title = City.GlobalIdLocal.ToString();
+                Title = City.Local.ToString();
             }
         }
     }

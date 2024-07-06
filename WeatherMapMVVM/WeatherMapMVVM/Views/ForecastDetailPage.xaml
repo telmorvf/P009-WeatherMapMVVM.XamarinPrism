@@ -4,47 +4,49 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:prism="http://prismlibrary.com"
         prism:ViewModelLocator.AutowireViewModel="True"
-        x:Class="WeatherMapMVVM.Views.ForecastDetailPage"
+        x:Class="WeatherMapMVVM.Views.ForecastDetailPage"      
         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+        xmlns:ffimageloadingSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
         xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
         xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
-        BackgroundColor="{StaticResource ColorBackground}" 
-        Title="{Binding Title}">
+        BackgroundColor="{StaticResource ColorBackground}"
+        Title="{Binding Title}"
+        Appearing="ContentPage_Appearing"
+    >
 
 
     <ScrollView>
         <StackLayout Padding="10">
-            
-            <ffimageloading:CachedImage
+            <ffimageloadingSvg:SvgCachedImage
                 Aspect="AspectFit"
-                CacheDuration="50"
-                RetryCount="3"
-                RetryDelay="600"
-                Source="ic_app_weather"
+                x:Name="iamgeWave"
+                Source="{Binding City.WTypeImage}"
                 HeightRequest="200" />
 
             <Grid
-                Padding="100,60">
-                
+                Padding="55,15">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
                         Width="125" />
                     <ColumnDefinition
-                        Width="100" />
+                        Width="250" />
                 </Grid.ColumnDefinitions>
-                
                 <Grid.RowDefinitions>
 
                     <RowDefinition
-                        Height="Auto" />
+                        Height="20" />
                     <RowDefinition
-                        Height="Auto" />
+                        Height="20" />
                     <RowDefinition
-                        Height="Auto" />
+                        Height="20" />
                     <RowDefinition
-                        Height="Auto" />
+                        Height="20" />
                     <RowDefinition
-                        Height="Auto" />
+                        Height="20" />
+                    <RowDefinition
+                        Height="20" />
+                    <RowDefinition
+                        Height="20" />
                 </Grid.RowDefinitions>
 
 
@@ -58,7 +60,7 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     LineBreakMode="TailTruncation"
-                    Text="{Binding City.IdWeatherType}" />
+                    Text="{Binding City.WType}" />
 
                 <Label
                     Grid.Row="1"
@@ -77,22 +79,21 @@
                     Grid.Column="0"
                     TextColor="Black"
                     FontAttributes="Bold"
-                    Text="{i18n:Translate TMin}" />
+                    Text="{i18n:Translate TMax}" />
                 <Label
                     Grid.Row="2"
                     Grid.Column="1"
-                    Text="{Binding City.TMin, StringFormat='{0} ºC'}" />
-                
+                    Text="{Binding City.TMax, StringFormat='{0} ºC'}" />
                 <Label
                     Grid.Row="3"
                     Grid.Column="0"
                     TextColor="Black"
                     FontAttributes="Bold"
-                    Text="{i18n:Translate TMax}" />
+                    Text="{i18n:Translate TMin}" />
                 <Label
                     Grid.Row="3"
                     Grid.Column="1"
-                    Text="{Binding City.TMax, StringFormat='{0} ºC'}" />
+                    Text="{Binding City.TMin, StringFormat='{0} ºC'}" />
 
                 <Label
                     Grid.Row="4"
@@ -104,29 +105,45 @@
                     Grid.Row="4"
                     Grid.Column="1"
                     LineBreakMode="TailTruncation"
-                    Text="{Binding City.PredWindDir}" />
+                    Text="{Binding City.PredWindDirDesc}" />
+
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="Latitude" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    x:Name="latitude"
+                    Text="{Binding City.Latitude}" />
+
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="Longitude" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    x:Name="longitude"
+                    Text="{Binding City.Longitude}" />
+
             </Grid>
 
-            <Label
-                Text="{Binding City.Latitude}"
-                x:Name="latitude"
-                IsVisible="false" />
-            <Label
-                Text="{Binding City.Longitude}"
-                x:Name="longitude"
-                IsVisible="false" />
-            
             <maps:Map
+                IsShowingUser="True"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 x:Name="myMap"
                 HasScrollEnabled="false"
                 MapType="Street">
-                
             </maps:Map>
+
 
         </StackLayout>
     </ScrollView>
-
 
 </ContentPage>

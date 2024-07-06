@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:prism="http://prismlibrary.com"
+        prism:ViewModelLocator.AutowireViewModel="True"
+        x:Class="WeatherMapMVVM.Views.CardinalPointsPage"
+        xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+        xmlns:ffimageloadingSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+        xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+        xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
+        BackgroundColor="{StaticResource ColorBackground}"
+        Title="{Binding Title}">
+
+
+    <ScrollView>
+        <StackLayout
+            Padding="40">
+            <ffimageloading:CachedImage
+                Aspect="AspectFit"
+                x:Name="iamgeCardinal"
+                Source="ic_cardinal_pointsL"
+                HeightRequest="200" 
+                />
+
+            <Grid
+                Padding="40,45">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="80" />
+                    <ColumnDefinition
+                        Width="50" />
+                    <ColumnDefinition
+                        Width="200" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="40" />
+                    <RowDefinition
+                        Height="40" />
+                </Grid.RowDefinitions>
+
+
+                <ffimageloading:CachedImage
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_northL"
+                    Source="ic_northL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="N" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Norte" />
+
+                <ffimageloading:CachedImage
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_n_eastL"
+                    Source="ic_n_eastL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="NE" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Nordeste" />
+
+                <ffimageloading:CachedImage
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_eastL"
+                    Source="ic_eastL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="E" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Este" />
+
+
+                <ffimageloading:CachedImage
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_s_eastL"
+                    Source="ic_s_eastL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="SE" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Sudeste" />
+
+                <ffimageloading:CachedImage
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_southL"
+                    Source="ic_southL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="S" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Sul" />
+
+                <ffimageloading:CachedImage
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_s_westL"
+                    Source="ic_s_westL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="SW" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Sudoeste" />
+
+
+                <ffimageloading:CachedImage
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_westL"
+                    Source="ic_westL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="W" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Oeste" />
+
+                <ffimageloading:CachedImage
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    x:Name="ic_n_westL"
+                    Source="ic_n_westL"
+                    HeightRequest="80" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="NW" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    LineBreakMode="TailTruncation"
+                    Text="Noroeste" />
+            </Grid>
+
+
+
+        </StackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>

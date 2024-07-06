@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="500" width="500" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path id="path9401" style="stroke:#969696;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:15;fill:#eeeeee;" d="m420.69,251.6c-4.6518-7.2812-10.416-13.753-17.293-19.416-24.035-18.965-49.736-21.45-70.688-19.897-11.484-45.038-40.624-70.743-84.037-71.191-12.54,0-24.473,2.5282-35.799,7.5845-11.326,5.0564-21.136,11.528-29.428,19.416-8.2925,7.8879-14.866,17.798-19.72,29.731-5.4652,15.294-6.8025,23.598-6.9778,39.389-15.62-3.9478-36.899-4.9476-50.058,0.30338-15.776,6.8766-26.9,18.607-33.372,35.192-4.0451,11.124-5.2586,22.046-3.6406,32.765s5.9665,20.529,13.045,29.428c7.0789,8.8992,15.978,15.371,26.697,19.416,7.4834,2.8316,14.866,4.2474,22.147,4.2474h217.83c17.394,0,33.372,2.7277,47.934-7.1828,35.442-25.003,42.38-69.05,23.36-99.787z" horiz-adv-x="1205.1" unicode="" glyph-name="cloud-6">
+  <animateTransform id="anim1" begin="0s;anim4.end" from="0 0" attributeName="transform" to="60 0" attributeType="xml" dur="1s" type="translate"/>
+  <animateTransform id="anim2" begin="anim1.end" from="60 0" attributeName="transform" to="0 0" attributeType="xml" dur="1s" type="translate"/>
+  <animateTransform id="anim3" begin="anim2.end" from="0 0" attributeName="transform" to="-60 0" attributeType="xml" dur="1s" type="translate"/>
+  <animateTransform id="anim4" begin="anim3.end" from="-60 0" attributeName="transform" to="0 0" attributeType="xml" dur="1s" type="translate"/>
+</path>
+</svg>

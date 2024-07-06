@@ -64,7 +64,16 @@
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator.Android">
       <Version>20.4.0.38</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
@@ -153,6 +162,56 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_avatar5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_cardinal_points.png" />
+    <AndroidResource Include="Resources\drawable\ic_google_maps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_d_01anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_02anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_03anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_04anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_05anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_06anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_07anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_08anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_09anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_10anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_11anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_12anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_13anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_14anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_15anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_16anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_17anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_18anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_19anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_20anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_21anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_22anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_23anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_24anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_25anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_26anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_27anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_28anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_29anim.svg" />
+    <AndroidResource Include="Resources\drawable\ic_d_30anim.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_cardinal_pointsL.png" />
+    <AndroidResource Include="Resources\drawable\ic_eastL.png" />
+    <AndroidResource Include="Resources\drawable\ic_northL.png" />
+    <AndroidResource Include="Resources\drawable\ic_n_eastL.png" />
+    <AndroidResource Include="Resources\drawable\ic_n_westL.png" />
+    <AndroidResource Include="Resources\drawable\ic_southL.png" />
+    <AndroidResource Include="Resources\drawable\ic_s_eastL.png" />
+    <AndroidResource Include="Resources\drawable\ic_s_westL.png" />
+    <AndroidResource Include="Resources\drawable\ic_westL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_google_mapsL.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

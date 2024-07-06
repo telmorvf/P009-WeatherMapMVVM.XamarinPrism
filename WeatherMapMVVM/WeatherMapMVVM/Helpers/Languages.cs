@@ -70,5 +70,10 @@ namespace WeatherMapMVVM.Helpers
         public static string Exit => Resource.Exit;
 
         public static string GoBack => Resource.GoBack;
+
+        public static string Chronometer => Resource.Chronometer;
+
+        public static string CardinalPoints => Resource.CardinalPoints;
+
     }
 }
