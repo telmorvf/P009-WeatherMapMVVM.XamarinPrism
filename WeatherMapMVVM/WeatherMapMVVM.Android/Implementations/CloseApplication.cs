@@ -1,5 +1,5 @@
 ﻿using Android.App;
-using WeatherMapMVVM.Services;
+using WeatherMapMVVM.Interfaces;
 using Xamarin.Forms;
 
 namespace WeatherMapMVVM.Droid.Implementations

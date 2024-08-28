@@ -1,7 +1,11 @@
-﻿using Prism.Commands;
+﻿using ImTools;
+using Prism.Commands;
 using Prism.Navigation;
 using System;
-using WeatherMapMVVM.Services;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using WeatherMapMVVM.Interfaces;
+using WeatherMapMVVM.Resources;
 using WeatherMapMVVM.Views;
 using Xamarin.Forms;
 
@@ -12,6 +16,12 @@ namespace WeatherMapMVVM.Views
     {
         private readonly INavigationService _navigationService;
         private DelegateCommand _selectMenuCommand;
+
+        //static ExitPage()
+        //{
+
+        //    DependencyService.Get<ICloseApplication>();
+        //}
 
         public ExitPage(INavigationService navigationService)
         {

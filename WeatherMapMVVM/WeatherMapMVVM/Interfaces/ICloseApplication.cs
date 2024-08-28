@@ -1,4 +1,4 @@
-﻿namespace WeatherMapMVVM.Services
+﻿namespace WeatherMapMVVM.Interfaces
 {
     public interface ICloseApplication
     {

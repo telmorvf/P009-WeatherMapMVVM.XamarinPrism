@@ -205,7 +205,19 @@
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator.IOS">
       <Version>20.4.0.38</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
@@ -222,22 +234,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_action_menu_white.png" />
     <BundleResource Include="Resources\ic_app_weather.png" />
     <BundleResource Include="Resources\ic_more_vert.png" />
-    <BundleResource Include="Resources\ic_person.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_about.png" />
-    <BundleResource Include="Resources\ic_countries.png" />
-    <BundleResource Include="Resources\ic_directions_run.png" />
-    <BundleResource Include="Resources\ic_globe.png" />
-    <BundleResource Include="Resources\ic_globesmall.png" />
-    <BundleResource Include="Resources\ic_menu.png" />
-    <BundleResource Include="Resources\ic_more_horiz.png" />
-    <BundleResource Include="Resources\ic_videogame_asset.png" />
-    <BundleResource Include="Resources\ic_wb_sunny.png" />
-    <BundleResource Include="Resources\NoPhoto_round.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_at1.png" />
@@ -274,10 +272,8 @@
     <BundleResource Include="Resources\ic_d_29anim.svg" />
     <BundleResource Include="Resources\ic_d_30anim.svg" />
     <BundleResource Include="Resources\ic_eastL.png" />
-    <BundleResource Include="Resources\ic_exit.png" />
     <BundleResource Include="Resources\ic_exit1.png" />
     <BundleResource Include="Resources\ic_forecast.png" />
-    <BundleResource Include="Resources\ic_forecast1.png" />
     <BundleResource Include="Resources\ic_google_maps.png" />
     <BundleResource Include="Resources\ic_google_mapsL.png" />
     <BundleResource Include="Resources\ic_northL.png" />
@@ -286,8 +282,6 @@
     <BundleResource Include="Resources\ic_southL.png" />
     <BundleResource Include="Resources\ic_s_eastL.png" />
     <BundleResource Include="Resources\ic_s_westL.png" />
-    <BundleResource Include="Resources\ic_telmo.png" />
-    <BundleResource Include="Resources\ic_weather.png" />
     <BundleResource Include="Resources\ic_westL.png" />
     <Content Include="Resources\splash_screen.xml" />
   </ItemGroup>

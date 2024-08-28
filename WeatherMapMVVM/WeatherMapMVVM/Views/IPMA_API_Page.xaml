@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="WeatherMapMVVM.Views.IPMA_API_Page"
+             xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
+             BackgroundColor="{StaticResource ColorBackground}"
+             Title="{Binding Title}">
+             
+    <StackLayout
+        Padding="10">
+        <Image
+            HeightRequest="200"
+            Source="IPMA_1"
+            Margin="0,0,0,0" />
+
+        <Grid
+            Padding="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                TextColor="Black"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Text="IPMA, I.P."/>
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                TextColor="Black"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                Text = "https://api.ipma.pt/#" 
+                />
+
+
+        </Grid>
+        
+        <Grid
+            Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="Auto" />
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Small"
+                Text="O Instituto Português do Mar e da Atmosfera, I. P. (IPMA, I. P.), é um instituto público, integrado na dministração indireta do Estado, dotado de autonomia administrativa e financeira e património próprio."/>
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Small"
+                Text="O IPMA, I. P., prossegue atribuições do Ministério do Mar, sob superintendência e tutela do respetivo ministro."/>
+
+            <Label
+                Grid.Row="4"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Small"
+                Text="A definição das orientações estratégicas e a fixação de objetivos para o IPMA, I.P., bem como o acompanhamento da sua execução, são articulados entre os membros do Governo responsáveis pelas áreas do mar e da ciência."/>
+        </Grid>
+
+
+        <Image
+            HeightRequest="200"
+            Source="ic_ipma_round"
+            Margin="0,0,0,0" />
+
+
+
+
+
+    </StackLayout>
+
+
+
+</ContentPage>

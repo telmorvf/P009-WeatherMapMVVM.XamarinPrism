@@ -14,21 +14,21 @@ namespace WeatherMapMVVM.Views
 
         private async void ContentPage_Appearing(object sender, EventArgs e)
         {
-            string lat = "";
-            string longi = "";
-            var latlng = new Position(38.85, -8.9);
-            myGoogleMaps.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(80)));
-
-            await WaitAndExecute(1000, () => lat = "41.5", () => longi = "-12.5");
-
-            LoadMap(lat, longi);
+            string lat = "38.758" ;
+            string longi = "-9.1455";
+            
+            LoadMap(lat, longi, 6000);
+            await WaitAndExecute(1500, () => lat = "38.758", () => longi = "-9.1455");
+            LoadMap(lat, longi, 8);
         }
-        protected async Task WaitAndExecute(int milisec, Action actionToExecute, Action actionToExecute2) { await Task.Delay(milisec); actionToExecute(); actionToExecute2(); }
 
-        private void LoadMap(string lat, string longi)
+        protected async Task WaitAndExecute(int milisec, Action actionToExecute, Action actionToExecute2) 
+            { await Task.Delay(milisec); actionToExecute(); actionToExecute2(); }
+
+        private void LoadMap(string lat, string longi, int km)
         {
-            var latlng = new Position(38.85, -8.9);
-            myGoogleMaps.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(40)));
+            var latlng = new Position(double.Parse(lat), double.Parse(longi));
+            myGoogleMaps.MoveToRegion(MapSpan.FromCenterAndRadius(latlng, Distance.FromKilometers(km)));
         }
     }
 }

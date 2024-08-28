@@ -33,6 +33,12 @@
                     Height="Auto" />
                 <RowDefinition
                     Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
             </Grid.RowDefinitions>
 
             <Label
@@ -41,7 +47,7 @@
                 TextColor="Black"
                 FontSize="Large"
                 FontAttributes="Bold"
-                Text="{i18n:Translate Author}" />
+                Text="{i18n:Translate Author}"/>
             <Label
                 Grid.Row="0"
                 FontSize="Large"
@@ -80,27 +86,54 @@
                 Grid.Column="0"
                 FontAttributes="Bold"
                 FontSize="Large"
-                Text="ufcd5423" />
+                Text="Email:" />
             <Label
                 Grid.Row="3"
                 Grid.Column="1"
                 FontSize="Large"
-                Text="Acesso móvel a sistemas de informação" />
+                Text="telmo@yopmail.com" />
             <Label
                 Grid.Row="4"
                 TextColor="Black"
                 Grid.Column="0"
                 FontAttributes="Bold"
                 FontSize="Large"
-                Text="Professor" />
+                Text="License: " />
             <Label
                 Grid.Row="4"
                 Grid.Column="1"
                 FontSize="Large"
-                Text="Rafael Santos" />
+                Text="MIT License" />
 
 
         </Grid>
+        <Grid
+            Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="Auto" />
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="Copyright (c) 2024 Telmo Fernandes "/>
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                FontSize="Small"
+                Text="Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (''the Software''), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: &#10; &#10;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&#10; &#10;THE SOFTWARE IS PROVIDED ''AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."/>
+        </Grid>
+
     </StackLayout>
 
 </ContentPage>

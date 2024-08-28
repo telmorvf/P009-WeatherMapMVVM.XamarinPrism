@@ -3,7 +3,7 @@
 	<item android:drawable="@color/launcher_background"/>
 	<item>
 		<bitmap android:gravity="center"
-				android:src="@drawable/ic_globesmall"/>
+				android:src="@drawable/ic_app_weather"/>
 
 	</item>
 </layer-list>

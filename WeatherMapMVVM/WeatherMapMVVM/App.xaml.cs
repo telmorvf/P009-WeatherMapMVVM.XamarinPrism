@@ -22,9 +22,9 @@ namespace WeatherMapMVVM
             SyncfusionLicenseProvider.RegisterLicense("ODEyMjk4QDMyMzAyZTM0MmUzMGVDYU8ycFpyMlV0K1o5QmVaVDVEUGxDN2pMNDM3dEJZRlZaeVk4SVNPRWs9\r\n");
             InitializeComponent();
 
-            //await NavigationService.NavigateAsync("NavigationPage/LoginPage");
+            await NavigationService.NavigateAsync("NavigationPage/LoginPage");
 
-            await NavigationService.NavigateAsync($"/{nameof(ForecastMasterDetailPage)}/NavigationPage/{nameof(ForecastPage)}");
+            //await NavigationService.NavigateAsync($"/{nameof(ForecastMasterDetailPage)}/NavigationPage/{nameof(ForecastPage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -42,6 +42,7 @@ namespace WeatherMapMVVM
             containerRegistry.RegisterForNavigation<ExitPage, ExitPageViewModel>();
             containerRegistry.RegisterForNavigation<CardinalPointsPage, CardinalPointsPageViewModel>();
             containerRegistry.RegisterForNavigation<MapsPage, MapsPageViewModel>();
+            containerRegistry.RegisterForNavigation<IPMA_API_Page, IPMA_API_PageViewModel>();
         }
     }
 }

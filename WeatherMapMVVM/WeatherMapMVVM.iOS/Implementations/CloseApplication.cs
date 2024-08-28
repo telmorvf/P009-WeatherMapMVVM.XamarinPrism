@@ -1,5 +1,5 @@
 ﻿using System.Threading;
-using WeatherMapMVVM.Services;
+using WeatherMapMVVM.Interfaces;
 
 namespace WeatherMapMVVM.iOS.Implementations
 {

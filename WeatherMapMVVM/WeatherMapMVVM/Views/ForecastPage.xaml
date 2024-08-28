@@ -58,6 +58,9 @@
                                 RetryDelay="600"
                                 Source="{Binding WTypeImage}"
                                 WidthRequest="100" />
+
+
+
                             <StackLayout
                                 Grid.Column="1"
                                 VerticalOptions="Center">
@@ -81,7 +84,6 @@
                                 </Label>
 
                                 <Label
-                                    
                                     FontAttributes="Bold, Italic"
                                     VerticalOptions="End">
                                     <Label.FormattedText>
@@ -93,6 +95,20 @@
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
+
+                                <Label
+                                    FontAttributes="Bold, Italic"
+                                    VerticalOptions="End">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                Text="{Binding Latitude, StringFormat='Latitude: {0}   '}" />
+                                            <Span
+                                                Text="{Binding Longitude, StringFormat='    Longitude: {0}'}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
                             </StackLayout>
                             <Image
                                 Grid.Column="2"

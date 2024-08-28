@@ -76,6 +76,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.7.0" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
@@ -131,31 +134,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_menu_white.png" />
     <AndroidResource Include="Resources\drawable\ic_app_weather.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_more_vert.png" />
-    <AndroidResource Include="Resources\drawable\ic_person.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\w_ic_d_01.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_about.png" />
-    <AndroidResource Include="Resources\drawable\ic_countries.png" />
-    <AndroidResource Include="Resources\drawable\ic_directions_run.png" />
-    <AndroidResource Include="Resources\drawable\ic_globe.png" />
-    <AndroidResource Include="Resources\drawable\ic_globesmall.png" />
-    <AndroidResource Include="Resources\drawable\ic_menu.png" />
-    <AndroidResource Include="Resources\drawable\ic_more_horiz.png" />
-    <AndroidResource Include="Resources\drawable\ic_videogame_asset.png" />
-    <AndroidResource Include="Resources\drawable\ic_wb_sunny.png" />
-    <AndroidResource Include="Resources\drawable\NoPhoto_round.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\emergency_exit.png" />
-    <AndroidResource Include="Resources\drawable\forecast.png" />
     <AndroidResource Include="Resources\drawable\ic_at1.png" />
     <AndroidResource Include="Resources\drawable\ic_exit1.png" />
     <AndroidResource Include="Resources\drawable\ic_forecast.png" />
@@ -212,6 +196,13 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_google_mapsL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_imp45.png" />
+    <AndroidResource Include="Resources\drawable\IPMA_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_ipma_round.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

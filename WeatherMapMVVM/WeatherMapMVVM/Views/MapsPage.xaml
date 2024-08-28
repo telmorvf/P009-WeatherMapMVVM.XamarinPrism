@@ -50,7 +50,6 @@
                     LineBreakMode="TailTruncation"
                     Text="" />
 
-
             </Grid>
 
             <maps:Map
@@ -58,8 +57,13 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 x:Name="myGoogleMaps"
-                HasScrollEnabled="false"
-                MapType="Street">
+                HasScrollEnabled="true"
+                MapType="Hybrid"
+                TrafficEnabled="True" 
+                IsEnabled="True" 
+                HasZoomEnabled="True"
+                
+                >
             </maps:Map>
 
 

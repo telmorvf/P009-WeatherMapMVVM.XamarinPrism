@@ -6,6 +6,7 @@
         prism:ViewModelLocator.AutowireViewModel="True"
         x:Class="WeatherMapMVVM.Views.ForecastDetailPage"      
         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+
         xmlns:ffimageloadingSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
         xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
         xmlns:i18n="clr-namespace:WeatherMapMVVM.Helpers"
@@ -21,8 +22,10 @@
                 Aspect="AspectFit"
                 x:Name="iamgeWave"
                 Source="{Binding City.WTypeImage}"
-                HeightRequest="200" />
-
+                HeightRequest="200" 
+                FadeAnimationForCachedImages="True" />
+           
+            
             <Grid
                 Padding="55,15">
                 <Grid.ColumnDefinitions>
@@ -139,7 +142,10 @@
                 VerticalOptions="FillAndExpand"
                 x:Name="myMap"
                 HasScrollEnabled="false"
-                MapType="Street">
+                MapType="Street"
+
+                >
+                
             </maps:Map>
 
 

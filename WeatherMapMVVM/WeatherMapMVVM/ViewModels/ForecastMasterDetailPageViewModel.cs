@@ -46,6 +46,12 @@ namespace WeatherMapMVVM.ViewModels
                 },
                 new Menu
                 {
+                    Icon = "ic_imp45",
+                    PageName = $"{nameof(IPMA_API_Page)}",
+                    Title = $"{Languages.About} api"
+                },
+                new Menu
+                {
                     Icon = "ic_at1",
                     PageName = $"{nameof(AboutPage)}",
                     Title = Languages.About

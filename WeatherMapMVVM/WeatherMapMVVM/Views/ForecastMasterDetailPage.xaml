@@ -9,7 +9,7 @@
         <ContentPage
             Title="Menu"
             IconImageSource="ic_action_menu_white"
-            BackgroundColor="{StaticResource ColorSecondary}">
+            BackgroundColor="{StaticResource ColorPrimary}">
 
             <ContentPage.Padding>
                 <OnPlatform

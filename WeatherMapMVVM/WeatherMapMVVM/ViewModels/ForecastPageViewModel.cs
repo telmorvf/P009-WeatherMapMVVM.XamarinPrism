@@ -42,8 +42,6 @@ namespace WeatherMapMVVM.ViewModels
 
         public DelegateCommand SearchCommand => _searchCommand ?? (_searchCommand = new DelegateCommand(ShowCities));
 
-
-
         public CityForecastResponse Forecast
         {
             get => _forecast;
