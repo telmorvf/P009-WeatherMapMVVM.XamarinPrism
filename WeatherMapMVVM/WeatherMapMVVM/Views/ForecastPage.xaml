@@ -85,6 +85,7 @@
 
                                 <Label
                                     FontAttributes="Bold, Italic"
+                                    FontSize="Small"
                                     VerticalOptions="End">
                                     <Label.FormattedText>
                                         <FormattedString>
@@ -102,9 +103,9 @@
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span
-                                                Text="{Binding Latitude, StringFormat='Latitude: {0}   '}" />
+                                                Text="{Binding Latitude, StringFormat='Lat.: {0}   '}" />
                                             <Span
-                                                Text="{Binding Longitude, StringFormat='    Longitude: {0}'}" />
+                                                Text="{Binding Longitude, StringFormat='    Long.: {0}'}" />
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
